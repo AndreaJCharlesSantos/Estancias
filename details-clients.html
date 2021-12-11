@@ -1,0 +1,324 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title> ModularAdmin - Free Dashboard Theme | HTML Version </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="css/vendor.css">
+        <!-- Theme initialization -->
+        <script>
+            var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
+            {};
+            var themeName = themeSettings.themeName || '';
+            if (themeName)
+            {
+                document.write('<link rel="stylesheet" id="theme-style" href="css/app-' + themeName + '.css">');
+            }
+            else
+            {
+                document.write('<link rel="stylesheet" id="theme-style" href="css/app.css">');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="main-wrapper">
+            <div class="app" id="app">
+                <header class="header">
+                    <div class="header-block header-block-collapse hidden-lg-up"> <button class="collapse-btn" id="sidebar-collapse-btn">
+    			<i class="fa fa-bars"></i>
+    		</button> </div>
+                    <div class="header-block header-block-search hidden-sm-down">
+                        <form role="search">
+                            <div class="input-container"> <i class="fa fa-search"></i> <input type="search" placeholder="Search">
+                                <div class="underline"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="header-block header-block-buttons"> <a href="https://github.com/modularcode/modular-admin-html" class="btn btn-sm header-btn">
+    			<i class="fa fa-github-alt"></i>
+    			<span>View on GitHub</span>
+    		</a> <a href="https://github.com/modularcode/modular-admin-html/stargazers" class="btn btn-sm header-btn">
+    			<i class="fa fa-star"></i>
+    			<span>Star Us</span>
+    		</a> <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.1.0/modular-admin-html-1.1.0.zip" class="btn btn-sm header-btn">
+    			<i class="fa fa-cloud-download"></i>
+    			<span>Download .zip</span>
+    		</a> </div>
+                    <div class="header-block header-block-nav">
+                        <ul class="nav-profile">
+                            <li class="notifications new"> <a href="" data-toggle="dropdown">
+    			    <i class="fa fa-bell-o"></i>
+    			    <sup>
+    			      <span class="counter">8</span>
+    			    </sup>
+    			  </a>
+                                <div class="dropdown-menu notifications-dropdown-menu">
+                                    <ul class="notifications-container">
+                                        <li>
+                                            <a href="" class="notification-item">
+                                                <div class="img-col">
+                                                    <div class="img" style="background-image: url('assets/faces/3.jpg')"></div>
+                                                </div>
+                                                <div class="body-col">
+                                                    <p> <span class="accent">Zack Alien</span> pushed new commit: <span class="accent">Fix page load performance issue</span>. </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="notification-item">
+                                                <div class="img-col">
+                                                    <div class="img" style="background-image: url('assets/faces/5.jpg')"></div>
+                                                </div>
+                                                <div class="body-col">
+                                                    <p> <span class="accent">Amaya Hatsumi</span> started new task: <span class="accent">Dashboard UI design.</span>. </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="notification-item">
+                                                <div class="img-col">
+                                                    <div class="img" style="background-image: url('assets/faces/8.jpg')"></div>
+                                                </div>
+                                                <div class="body-col">
+                                                    <p> <span class="accent">Andy Nouman</span> deployed new version of <span class="accent">NodeJS REST Api V3</span> </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <footer>
+                                        <ul>
+                                            <li> <a href="">
+    			            View All
+    			          </a> </li>
+                                        </ul>
+                                    </footer>
+                                </div>
+                            </li>
+                            <li class="profile dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <div class="img" style="background-image: url('https://avatars3.githubusercontent.com/u/3959008?v=3&s=40')"> </div> <span class="name">
+    			      John Doe
+    			    </span> </a>
+                                <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1"> <a class="dropdown-item" href="#">
+    			      <i class="fa fa-user icon"></i>
+    			      Profile
+    			    </a> <a class="dropdown-item" href="#">
+    			      <i class="fa fa-bell icon"></i>
+    			      Notifications
+    			    </a> <a class="dropdown-item" href="#">
+    			      <i class="fa fa-gear icon"></i>
+    			      Settings
+    			    </a>
+                                    <div class="dropdown-divider"></div> <a class="dropdown-item" href="login.html">
+    			      <i class="fa fa-power-off icon"></i>
+    			      Logout
+    			    </a> </div>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <aside class="sidebar">
+                    <div class="sidebar-container">
+                        <div class="sidebar-header">
+                            <div class="brand">
+                                <div class="logo"> <span class="l l1"></span> <span class="l l2"></span> <span class="l l3"></span> <span class="l l4"></span> <span class="l l5"></span> </div> Modular Admin </div>
+                        </div>
+                        <nav class="menu">
+                            <ul class="nav metismenu" id="sidebar-menu">
+                                <li> <a href="index.html">
+    						<i class="fa fa-home"></i> Dashboard
+    					</a> </li>
+                        </ul>
+    				
+                        </nav>
+                    </div>
+                </aside>
+
+                <div class="sidebar-overlay" id="sidebar-overlay"></div>
+                <article class="content items-list-page">
+                    <div class="title-search-block">
+                        <div class="title-block">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3 class="title"> Clientes </h3>
+                                    <p class="title-description"> Detalles del cliente </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-search">
+                            <form class="form-inline">
+                                <div class="input-group"> <input type="text" class="form-control boxed rounded-s" placeholder=""> <span class="input-group-btn">
+					<button class="btn btn-secondary rounded-s" type="button">
+						<i class="fa fa-search"></i>
+					</button>
+				</span> </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--Información general-->
+                    <form action="">
+                        <section class="section">
+                            <div class="row sameheight-container">
+                                <div class="col-md-12">
+                                    <div class="card card-block sameheight-item">
+                                        <div class="title-block">
+                                            <h3 class="title"> Información general </h3>
+                                        </div>
+                                            <div class="row">
+                                                <div class="col-xs-6 col-md-4"> <label for="razon">Nombre(s)</label> <input type="text" class="form-control" id="razon"> </div>
+                                                <div class="col-xs-6 col-md-4"> <label for="rfc">Apellido paterno</label> <input type="text" class="form-control" id="rfc"> </div>
+                                                <div class="col-xs-6 col-md-4"> <label for="contacto">Apellido materno</label> <input type="text" class="form-control" id="contacto"> </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-6 col-md-4"> <label for="razon">CURP</label> <input type="text" class="form-control" id="razon"> </div>
+                                                <div class="col-xs-6 col-md-4"> <label for="rfc">RFC</label> <input type="text" class="form-control" id="rfc"> </div>
+                                                <div class="form-group">
+                                                        <div class="col-xs-6 col-md-4"> <label for="contacto">Sexo</label>
+                                                    </div>
+                                                    <div class="col-xs-6 col-md-4">
+                                                            <label><input class="radio" name="inline-radios" type="radio">
+                                                            <span>Masculino</span>
+                                                        </label> <label>
+                                                            <input class="radio" name="inline-radios" type="radio">
+                                                            <span>Femenino</span></label>
+                                                        </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div class="col-xs-6 col-md-4"> <label for="razon">Fecha de nacimiento</label> <input type="text" class="form-control" id="razon"> </div>
+                                                    <div class="col-xs-6 col-md-4"> <label>Tipo de sangre</label> <select class="c-select form-control boxed">
+                                                        <option selected>Seleccionar una opción</option>
+                                                        <option value="1">Administrador</option>
+                                                        <option value="2">Normal</option>
+                                                        <option value="3">Otro</option>
+                                                    </select> </div>
+                                                    <div class="col-xs-6 col-md-4"> <label>Estado civil</label> <select class="c-select form-control boxed">
+                                                        <option selected>Seleccionar una opción</option>
+                                                        <option value="1">Casado</option>
+                                                        <option value="2">Soltero</option>
+                                                        <option value="3">Otro</option>
+                                                    </select> </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!--Contacto-->
+                        <section class="section">
+                            <div class="row sameheight-container">
+                                <div class="col-md-12">
+                                    <div class="card card-block sameheight-item">
+                                        <div class="title-block">
+                                            <h3 class="title"> Contacto </h3>
+                                        </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div class="col-xs-6 col-md-4"> <label for="email">Correo electrónico</label> <input type="email" class="form-control" id="email"> </div>
+                                                    <div class="ccol-xs-6 col-md-4"> <label for="telFijo">Teléfono fijo</label> <input type="text" class="form-control" id="telFijo" > </div>
+                                                    <div class="col-xs-6 col-md-4"> <label for="telCel">Teléfono celular del contacto</label> <input type="text" class="form-control" id="telCel"> </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div class="col-xs-6 col-md-4"> <label for="email">Teléfono de trabajo</label> <input type="email" class="form-control" id="email"> </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!--Dirección-->
+                        <section class="section">
+                            <div class="row sameheight-container">
+                                <div class="col-md-12">
+                                    <div class="card card-block sameheight-item">
+                                        <div class="title-block">
+                                            <h3 class="title"> Dirección </h3>
+                                        </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div class="col-xs-6 col-md-4"> <label>Tipo de vialidad</label> <select class="c-select form-control boxed">
+                                                        <option selected>Seleccionar una opción</option>
+                                                        <option value="1">Administrador</option>
+                                                        <option value="2">Normal</option>
+                                                        <option value="3">Otro</option>
+                                                    </select> </div>
+                                                    <div class="ccol-xs-6 col-md-4"> <label for="email">Vialidad</label> <input type="email" class="form-control" id="email" placeholder="Ingrese su correo"> </div>
+                                                    <div class="col-xs-6 col-md-2"> <label for="numExt">Número exterior</label> <input type="text" class="form-control" id="numExt"> </div>
+                                                    <div class="col-xs-6 col-md-2"> <label for="numInt">Número interior</label> <input type="text" class="form-control" id="numInt"> </div>
+                                                </div>   
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div class="col-xs-6 col-md-4"> <label>Tipo de asentamiento</label> <select class="c-select form-control boxed">
+                                                        <option selected>Seleccionar una opción</option>
+                                                        <option value="1">Administrador</option>
+                                                        <option value="2">Normal</option>
+                                                        <option value="3">Otro</option>
+                                                    </select> </div>    
+                                                    <div class="col-xs-6 col-md-6"> <label for="asentamiento">Asentamiento</label> <input type="text" class="form-control" id="asentamiento"> </div>
+                                                    <div class="col-md-2"> <label for="cp">Código postal</label> <input type="text" class="form-control" id="cp"></div>                                                                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div class="col-xs-6"> <label for="calle1">Entre calle</label> <input type="text" class="form-control" id="calle1"> </div>
+                                                    <div class="col-xs-6"> <label for="calle2">Y calle</label> <input type="text" class="form-control" id="calle2"> </div>                                                              
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div class="col-xs-6"> <label>Estado</label> <select class="c-select form-control boxed">
+                                                        <option selected>Seleccionar una opción</option>
+                                                        <option value="1">Tamaulipas</option>
+                                                        <option value="2">Nuevo León</option>
+                                                        <option value="3">Chihuahua</option>
+                                                    </select> </div>   
+                                                    <div class="col-xs-6"> <label>Ciudad</label> <select class="c-select form-control boxed">
+                                                        <option selected>Seleccionar una opción</option>
+                                                        <option value="1">Victoria</option>
+                                                        <option value="2">Monterrey</option>
+                                                        <option value="3">Chihuahua</option>
+                                                    </select> </div>   
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </form>
+                </article>
+
+                <footer class="footer">
+                    <div class="footer-block buttons"> <iframe class="footer-github-btn" src="https://ghbtns.com/github-btn.html?user=modularcode&repo=modular-admin-html&type=star&count=true" frameborder="0" scrolling="0" width="140px" height="20px"></iframe> </div>
+                    <div class="footer-block author">
+                        <ul>
+                            <li> created by <a href="https://github.com/modularcode">ModularCode</a> </li>
+                            <li> <a href="https://github.com/modularcode/modular-admin-html#get-in-touch">get in touch</a> </li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- Reference block for JS -->
+        <div class="ref" id="ref">
+            <div class="color-primary"></div>
+            <div class="chart">
+                <div class="color-primary"></div>
+                <div class="color-secondary"></div>
+            </div>
+        </div>
+        <script src="js/vendor.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+
+</html>
